@@ -38,7 +38,6 @@ jobs:
 
       - name: Install Haxelib
         run: |
-          haxelib install extension-webm --quiet
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null
           haxelib install lime 7.9.0 --quiet
@@ -55,6 +54,7 @@ jobs:
           haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit --quiet
           haxelib install actuate --quiet
           haxelib list
+          haxelib install extension-webm --quiet
 
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
