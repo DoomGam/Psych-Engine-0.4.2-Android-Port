@@ -54,7 +54,6 @@ jobs:
           install_with_retry flixel-ui 2.3.3
           install_with_retry hscript
           install_with_retry flixel-addons 2.10.0
-          install_with_retry faxe
           install_with_retry actuate
           
           haxelib git extension-webm https://github.com/HaxeExtension/extension-webm --quiet
@@ -76,6 +75,11 @@ jobs:
           haxelib run lime config ANDROID_SETUP true
           haxelib set lime 7.9.0
           haxelib set openfl 9.1.0
+        env:
+          ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
+
+      - name: Rebuild extension-webm
+        run: haxelib run lime rebuild extension-webm android
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
