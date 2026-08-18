@@ -49,7 +49,7 @@ jobs:
           install_with_retry lime 7.9.0
           install_with_retry openfl 9.1.0
           haxelib --never install flixel 4.9.0 --quiet
-          haxelib run lime setup --quiet
+          echo y | haxelib run lime setup
           install_with_retry flixel-tools 1.5.1
           install_with_retry flixel-ui 2.3.3
           install_with_retry hscript
