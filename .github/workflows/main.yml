@@ -38,6 +38,7 @@ jobs:
 
       - name: Install Haxelib
         run: |
+          haxelib install extension-webm --quiet
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null
           haxelib install lime 7.9.0 --quiet
