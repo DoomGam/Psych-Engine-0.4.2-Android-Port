@@ -79,7 +79,7 @@ jobs:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
       - name: Rebuild extension-webm
-        run: haxelib run lime rebuild extension-webm android
+        run: haxelib run lime rebuild extension-webm android -DHXCPP_ARMv7 -DHXCPP_ARM64
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
