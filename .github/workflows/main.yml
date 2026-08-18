@@ -56,8 +56,8 @@ jobs:
           install_with_retry flixel-addons 2.10.0
           install_with_retry faxe
           install_with_retry actuate
-          haxelib install extension-webm --quiet
           
+          haxelib git extension-webm https://github.com/HaxeExtension/extension-webm --quiet
           haxelib git faxe https://github.com/ashea-code/faxe --quiet
           haxelib git polymod https://github.com/FunkinCrew/polymod --quiet
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc --quiet
